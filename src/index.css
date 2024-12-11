@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Manrope", sans-serif;
+  }
+/* 
+  .button-primary {
+    @apply bg-[#232323] text-white font-bold text-xs py-3 px-14 uppercase hover:bg-white hover:text-black hover:border border-black transition-colors duration-300;
+  } */
+
+  .theme-btn{
+    @apply bg-[#02b290] text-white font-semibold
+  }
+
+  .bg-theme{
+    @apply bg-[#02b290];
+  }
+
+  .text-theme{
+    @apply text-[#02b290];
+  }
+
+  .border-theme{
+    @apply border-[#02b290];
+  }
+
+
+  .container{
+    @apply w-[95%] mx-auto;
+  }
+
+  .productSwiper .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+
+  .swiper-wrapper .swiper-slide {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Slider Responsive */
+
+  
+
+  @media (min-width: 1280px) {
+
+    .productSwiper .swiper-wrapper .swiper-slide {
+    width: 160px !important;
+    }
+
+    .productSwiper .swiper-wrapper {
+      flex-direction: column;
+    }
+
+    .productSwiper .swiper-wrapper .swiper-slide {
+      width: 140px !important;
+  
+      height: auto;
+    }
+  
+  
+  }
