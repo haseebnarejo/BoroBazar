@@ -1,44 +1,36 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 const Sidebar = () => {
   const menuItems = [
-    { icon: "fa-solid:user-cog", label: "Account Settings", route: "/account-setting" },
-    { icon: "fa-solid:shopping-bag", label: "Orders", route: "/cart" },
-    { icon: "fa-solid:heart", label: "Wishlist", route: "/wishlist" },
-    { icon: "fa-solid:map-marker-alt", label: "Address", route: "/categories" },
-    { icon: "fa-solid:bell", label: "Notifications", route: "/notifications" },
-    { icon: "fa-solid:file-contract", label: "Legal Notice", route: "/about-us" },
-    { icon: "fa-solid:question-circle", label: "Help Center", route: "/faq" },
-    { icon: "fa-solid:lock", label: "Change Password", route: "/signin" },
-    { icon: "fa-solid:sign-out-alt", label: "Logout", route: "/logout" },
+    { icon: "fa-solid:user-cog", label: "Account Settings" },
+    { icon: "fa-solid:shopping-bag", label: "Orders" },
+    { icon: "fa-solid:heart", label: "Wishlist" },
+    { icon: "fa-solid:map-marker-alt", label: "Address" },
+    { icon: "fa-solid:bell", label: "Notifications" },
+    { icon: "fa-solid:file-contract", label: "Legal Notice" },
+    { icon: "fa-solid:question-circle", label: "Help Center" },
+    { icon: "fa-solid:lock", label: "Change Password" },
+    { icon: "fa-solid:sign-out-alt", label: "Logout" },
   ];
 
   return (
-    <div className="w-60 border-r bg-white h-screen">
+    <div className="border">
       <nav className="flex flex-col">
         {menuItems.map((item, index) => (
-          <NavItem key={index} icon={item.icon} label={item.label} route={item.route} />
+          <NavItem key={index} icon={item.icon} label={item.label} />
         ))}
       </nav>
     </div>
   );
 };
 
-const NavItem = ({ icon, label, route }) => {
+const NavItem = ({ icon, label }) => {
   return (
-    <NavLink
-      to={route}
-      className={({ isActive }) =>
-        `flex items-center space-x-3 cursor-pointer px-5 py-4 transition-all ${
-          isActive ? "bg-gray-100 text-gray-800" : "text-gray-500"
-        } hover:bg-gray-100`
-      }
-    >
-      <Icon icon={icon} className="text-2xl" />
-      <span className="font-medium text-sm">{label}</span>
-    </NavLink>
+    <div className="flex items-center space-x-3 cursor-pointer px-5 py-4 hover:bg-gray-100">
+      <Icon icon={icon} className="text-2xl text-gray-500" />
+      <span className="font-medium text-sm text-gray-500">{label}</span>
+    </div>
   );
 };
 
