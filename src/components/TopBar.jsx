@@ -3,7 +3,7 @@ import React from 'react';
 
 function TopBar() {
   return (
-    <div className="bg-theme">
+    <div className="bg-theme hidden sm:block">
       <div className="container relative text-white flex justify-center gap-5 items-center p-2">
         <div className="flex items-center">
           <span className='text-sm'>Claim your online <span className='font-semibold'>FREE Delivery or Shipping</span> today! Expires in</span>

@@ -95,28 +95,30 @@ function Collections() {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-            
 
-            {items.map((item) => (
-                <SwiperSlide>
-                    < div
-                        key={item.id}
-                        className="bg-white h-full border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    >
-                        <img
-                            src={item.img}
-                            alt={item.title}
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h3 className="text-lg font-semibold text-gray-800 truncate line-clamp-1 text-ellipsis">
-                                {item.title}
-                            </h3>
-                            <p className="mt-2 text-sm text-gray-600 truncate line-clamp-1 text-ellipsis">{item.description}</p>
+
+                {items.map((item) => (
+                    <SwiperSlide>
+                        < div
+                            key={item.id}
+                            className="bg-white h-full border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                        >
+                            <div className='overflow-hidden'>
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className="w-full h-48 object-cover hover:scale-105 transition-all duration-500 ease-out"
+                                />
+                            </div>
+                            <div className="p-4">
+                                <h3 className="text-lg font-semibold text-gray-800 truncate line-clamp-1 text-ellipsis">
+                                    {item.title}
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-600 truncate line-clamp-1 text-ellipsis">{item.description}</p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-            ))}
+                    </SwiperSlide>
+                ))}
             </Swiper>
 
         </div >
