@@ -47,7 +47,24 @@ body {
 
   /* Slider Responsive */
 
-  
+  /* Zoom effect */
+.swiper-slide img {
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Ensures the image is properly scaled */
+}
+
+/* Apply zoom and make image follow cursor */
+.swiper-slide:hover img {
+  transform: scale(1.2); /* Zoom in the image */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Add the "zoom-container" class for the container of the image to position it relatively */
+.zoom-container {
+  position: relative;
+  overflow: hidden; /* Hide the overflow of the zoomed-in image */
+}
+
 
   @media (min-width: 1280px) {
 

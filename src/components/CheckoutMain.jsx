@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
+import { Accordion, AccordionHeader, AccordionBody} from "@material-tailwind/react";
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 
